@@ -1,0 +1,35 @@
+// For color
+$main-color-bg: #0A0722;
+$color-footer-bg: #00030C;
+$color-white: #ffffff;
+$colot-mark: #B370FF;
+$color-hover: #0A0722;
+
+// For device
+$mediaWidthMobile: 767px;
+$mediaWidthTablet: 991px;
+$mediaWidthLaptop: 1060px;
+
+@mixin media-tablet {
+    @media (max-width: $mediaWidthTablet) {
+        @content;
+    }
+}
+
+@mixin media-laptop {
+    @media (max-width: $mediaWidthLaptop) {
+        @content;
+    }
+}
+
+@mixin media-mobile {
+    @media (max-width: $mediaWidthMobile) {
+        @content;
+    }
+}
+
+@mixin media-custom {
+    @media (max-width: $width) {
+        @content;
+    }
+}
