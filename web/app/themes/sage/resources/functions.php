@@ -149,3 +149,15 @@ if( function_exists('acf_add_options_page') ) {
     );
 }
 /* ACF theme options END */
+
+
+function wpschool_load_fontawesome() {
+    wp_enqueue_style( 'font-awesome', get_stylesheet_directory_uri() . '/themes/sage/resources/assets/fonts/css/fontawesome.min.css' );
+}
+add_action( 'wp_enqueue_scripts', 'wpschool_load_fontawesome' );
+
+// add_action( 'wp_enqueue_scripts', 'enqueue_load_fa' );
+
+// function enqueue_load_fa() {
+//     wp_enqueue_style( 'load-fa', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' );
+// }

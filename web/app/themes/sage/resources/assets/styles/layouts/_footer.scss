@@ -1,5 +1,115 @@
 // Style for footer
-footer {
-    padding-top: 100px;
+.footer {
     background-color: $color-footer-bg;
+
+    &__logo-wrapp {
+        margin-right: 20px;
+    }
+
+    &__сopyright {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 50px 15px;
+        border-top: solid 1px;
+        border-color: rgba($color: #ffffff, $alpha: 0.5);
+
+        @include media-mobile {
+            flex-direction: column;
+        }
+    }
+
+    &__wrapp {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 100px 0;
+        align-items: center;
+
+        @include media-tablet {
+            display: block;
+        }
+    }
+
+    &__menu {
+        display: flex;
+        flex-wrap: wrap;
+
+        @include media-tablet {
+            display: block;
+        }
+
+        @include media-mobile {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+    }
+
+    &__social {
+        margin-left: 95px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        max-width: 200px;
+        width: 200px;
+
+        @include media-tablet {
+            margin-left: 0;
+        }
+    }
+
+    &__nav {
+        display: flex;
+
+        @include media-tablet {
+            margin: 20px 0;
+        }
+
+        @include media-mobile{
+            width: 48%;
+        }
+
+        .nav {
+            display: flex;
+            flex-wrap: wrap;
+            height: 100%;
+
+            li {
+                width: 33.3333%;
+
+                @include media-mobile {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    &__social-link {
+        display: inline-block;
+        width: 33.33333%;
+        font-size: 20px;
+    }
+
+    &__privacy {
+
+        @include media-mobile {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 15px;
+        }
+
+        .footer__privacy-link {
+            display: inline-block;
+            margin-left: 170px;
+
+            @include media-tablet {
+                margin-left: 25px;
+            }
+
+            @include media-mobile {
+                margin-left: 0px;
+            }
+        }
+    }
 }

@@ -1,10 +1,10 @@
 {
-    "key": "group_61893bae0dc02",
-    "title": "Options",
+    "key": "group_618a7c69093ef",
+    "title": "Block: Hero banner",
     "fields": [
         {
-            "key": "field_6189407ea795f",
-            "label": "Main Options",
+            "key": "field_618a7fbc9ccc0",
+            "label": "Hero banner",
             "name": "",
             "type": "tab",
             "instructions": "",
@@ -19,9 +19,28 @@
             "endpoint": 0
         },
         {
-            "key": "field_61893bd4e7438",
-            "label": "Logo",
-            "name": "logo",
+            "key": "field_618a7cbfb194e",
+            "label": "Title",
+            "name": "title",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_618a7fce9ccc1",
+            "label": "Image",
+            "name": "image",
             "type": "image",
             "instructions": "",
             "required": 0,
@@ -43,8 +62,32 @@
             "mime_types": ""
         },
         {
-            "key": "field_61894061a795e",
-            "label": "Header Options",
+            "key": "field_618a8def260dc",
+            "label": "Image background",
+            "name": "image_bg",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "full",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_618a81a4d4093",
+            "label": "Info",
             "name": "",
             "type": "tab",
             "instructions": "",
@@ -59,9 +102,26 @@
             "endpoint": 0
         },
         {
-            "key": "field_61893d4efa10e",
-            "label": "Button",
-            "name": "button",
+            "key": "field_618a82df3c81a",
+            "label": "Mobile Store",
+            "name": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_618a81bd6a9cf",
+            "label": "Mobile Store",
+            "name": "mobile_store",
             "type": "repeater",
             "instructions": "",
             "required": 0,
@@ -78,9 +138,39 @@
             "button_label": "",
             "sub_fields": [
                 {
-                    "key": "field_61893d8c75e86",
-                    "label": "Button Links",
-                    "name": "button_links",
+                    "key": "field_618a82106a9d0",
+                    "label": "Store Icon",
+                    "name": "store_icon",
+                    "type": "font-awesome",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "icon_sets": [
+                        "fas",
+                        "far",
+                        "fal",
+                        "fad",
+                        "fab"
+                    ],
+                    "custom_icon_set": "",
+                    "default_label": "",
+                    "default_value": "",
+                    "save_format": "element",
+                    "allow_null": 0,
+                    "show_preview": 1,
+                    "enqueue_fa": 0,
+                    "fa_live_preview": "",
+                    "choices": []
+                },
+                {
+                    "key": "field_618a823d6a9d1",
+                    "label": "Store Link",
+                    "name": "store_link",
                     "type": "link",
                     "instructions": "",
                     "required": 0,
@@ -95,10 +185,10 @@
             ]
         },
         {
-            "key": "field_61894095a7960",
-            "label": "Footer Options",
+            "key": "field_618a832c7b21f",
+            "label": "Message",
             "name": "",
-            "type": "tab",
+            "type": "accordion",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -107,13 +197,14 @@
                 "class": "",
                 "id": ""
             },
-            "placement": "top",
+            "open": 0,
+            "multi_expand": 0,
             "endpoint": 0
         },
         {
-            "key": "field_618a27cd25f25",
-            "label": "Site Name",
-            "name": "site_name",
+            "key": "field_618a835d7b220",
+            "label": "Message",
+            "name": "message",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -130,9 +221,26 @@
             "maxlength": ""
         },
         {
-            "key": "field_618a286b9fae3",
-            "label": "Privacy",
-            "name": "privacy",
+            "key": "field_618a83717b221",
+            "label": "Social",
+            "name": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_618a838a7b222",
+            "label": "Social hero",
+            "name": "social_hero",
             "type": "repeater",
             "instructions": "",
             "required": 0,
@@ -149,10 +257,10 @@
             "button_label": "",
             "sub_fields": [
                 {
-                    "key": "field_618a29179fae4",
-                    "label": "Privacy Link",
-                    "name": "privacy_link",
-                    "type": "link",
+                    "key": "field_618a86007ee93",
+                    "label": "Icon social",
+                    "name": "icon_social",
+                    "type": "font-awesome",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -161,45 +269,11 @@
                         "class": "",
                         "id": ""
                     },
-                    "return_format": "array"
-                }
-            ]
-        },
-        {
-            "key": "field_618a512ef29b5",
-            "label": "Networks social",
-            "name": "networks_social",
-            "type": "repeater",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "collapsed": "",
-            "min": 0,
-            "max": 0,
-            "layout": "table",
-            "button_label": "",
-            "sub_fields": [
-                {
-                    "key": "field_618a5154f29b6",
-                    "label": "Icon social",
-                    "name": "icon_social",
-                    "type": "font-awesome",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "20",
-                        "class": "",
-                        "id": ""
-                    },
                     "icon_sets": [
                         "fas",
                         "far",
+                        "fal",
+                        "fad",
                         "fab"
                     ],
                     "custom_icon_set": "",
@@ -213,7 +287,7 @@
                     "choices": []
                 },
                 {
-                    "key": "field_618a52caf29b7",
+                    "key": "field_618a86897ee94",
                     "label": "Link social",
                     "name": "link_social",
                     "type": "url",
@@ -234,9 +308,9 @@
     "location": [
         [
             {
-                "param": "options_page",
+                "param": "page_template",
                 "operator": "==",
-                "value": "theme-options-global"
+                "value": "views\/home.blade.php"
             }
         ]
     ],
@@ -248,5 +322,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1636458538
+    "modified": 1636470347
 }

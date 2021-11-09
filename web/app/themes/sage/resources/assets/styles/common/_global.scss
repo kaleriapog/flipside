@@ -1,0 +1,9 @@
+a {
+    transition: all 0.3s;
+
+    display: inline-block;
+    &:hover {
+        color: $color-hover;
+    }
+}
+
