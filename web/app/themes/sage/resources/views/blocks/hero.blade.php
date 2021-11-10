@@ -2,14 +2,13 @@
 
 $title = get_field('title', $post->ID);
 $image = get_field('image', $post->ID);
+$image_arrow = get_field('way_down_icon', $post->ID);
 $message = get_field('message', $post->ID);
 $mobile_store = get_field('mobile_store', "$post->ID");
 $social_hero = get_field('social_hero', "$post->ID");
 
-
 @endphp
 
-@section('content')
     <section class="hero">
         <div class="hero__wrapp main-width">
             <div class="hero__content">
@@ -21,7 +20,7 @@ $social_hero = get_field('social_hero', "$post->ID");
                 </div>
             </div>
             <div class="hero__info">
-                <div class="hero__mobile-store">
+                <div class="hero__mobile-store mobile-store">
                     @if(!empty($mobile_store))
                         @foreach($mobile_store as $mobile_store)
                             @php
@@ -32,6 +31,11 @@ $social_hero = get_field('social_hero', "$post->ID");
                         @endforeach
                     @endif
                 </div>
+                @if(!empty($image_arrow))
+                    <div class="hero__arrow-wrapp">
+                        <img src="{{ $image_arrow['url'] }}" alt="{{ $image_arrow['title'] }}">
+                    </div>
+                @endif
                 <div class="hero__social-wrapp">                
                     @if(!empty($message))
                         <p class="hero__message">{{ $message }}</p>
@@ -51,4 +55,3 @@ $social_hero = get_field('social_hero', "$post->ID");
             </div>
         </div>
     </section>
-@endsection

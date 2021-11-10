@@ -2,10 +2,13 @@
   Template Name: Home Template
 --}}
 
-@php
-    $fields = get_field('title', $post->ID);
-@endphp
-
 @extends('layouts.app')
 
-@include('blocks.hero')
+@section('content')
+
+  @include('blocks.hero')
+  @include('blocks.accordion')
+  @include('blocks.earn')
+  @include('blocks.welcome')
+
+@endsection
