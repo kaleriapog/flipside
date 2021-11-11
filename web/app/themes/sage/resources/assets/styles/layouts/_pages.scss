@@ -62,6 +62,12 @@ h2, .title {
     }
 }
 
+.subtitle {
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 160%;
+}
+
 .hero-title {
     font-weight: 800;
     font-size: 80px;
@@ -431,20 +437,200 @@ h2, .title {
 
 .contact-form {
     padding-top: 65px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto;    
 
     &__wrapp {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
+
+        @include media-1200 {            
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .title {
+
+            @include media-1200 {
+                text-align: center;
+            }
+
+            @include media-mobile {
+                text-align: left
+            }
+        }
+
+        .subtitle {
+
+            @include media-1200 {
+                text-align: center;
+            }
+
+            @include media-mobile {
+                text-align: left
+            }
+        }
     }
 
     &__description {
         width: 100%;
-        max-width: 49%;
+        max-width: 43%;
+
+        @include media-1200 {
+            margin-bottom: 50px;
+            max-width: 100%;
+        }
     }
+
+    // Form style
 
     &__form {
         width: 100%;
-        max-width: 49%;
+        max-width: 665px;
+        padding: 65px;
+        border: solid 1px;
+        border-image-source: linear-gradient(135.68deg, #B679D2 1.9%, #79AFD2 36.17%, #8FD89A 81.87%, #F0DD75 128.53%, #E8735C 181.84%);
+        filter: drop-shadow(0px 4px 31px rgba(0, 0, 0, 0.15));
+        border-radius: 6px;
+        border-image-slice: 1;
+        background-color: $color-black;
+
+        @include mediaWidthMobileSmall {
+            padding: 30px;
+        }
+
+        input {
+            color: rgba($color: #ffffff, $alpha: 0.6);
+            padding: 10px 16px;
+            border-bottom: 1px solid $color-white;
+            max-width: 560px;
+            width: 100%;
+            margin-bottom: 25px;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 160%;
+        }
+
+        .form-name-wrapp {
+            display: flex;
+            justify-content: space-between;
+
+            @include media-mobile {
+                flex-direction: column;
+            }
+
+            input {
+                max-width: 260px;
+
+                @include media-mobile {
+                    max-width: 100%;
+                }
+            }
+        }
+
+        .agree-wrapp {
+            display: flex;
+
+            input[type="checkbox"] {
+                max-width: none;
+                width: auto;
+                margin-right: 16px;
+            }
+        }
+
+        label {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 125%;
+            color: $color-white;
+        }
+
+        input[type="submit"] {
+            border-radius: 4px;
+            border: 1px solid $color-white;
+            font-weight: 600;
+            color: $color-white;
+            letter-spacing: 0.5px;
+            cursor: pointer;
+            transition: all 0.4s;
+
+            &:hover {
+                border-image-source: linear-gradient(135.68deg, #B679D2 1.9%, #79AFD2 36.17%, #8FD89A 81.87%, #F0DD75 128.53%, #E8735C 181.84%);
+                filter: drop-shadow(0px 4px 31px rgba(0, 0, 0, 0.15));
+                border-image-slice: 1;
+                border-radius: 4px;
+            }
+        }
+
+        .links-agree {
+            padding-left: 3px;
+
+            a {
+                font-weight: 600;
+                text-decoration-line: underline;
+                color: $color-white;
+    
+                &:hover {
+                    color: rgba($color: #ffffff, $alpha: 0.6);
+                }
+            }
+        }
+
+        .checkbox-agree-wrapp {
+            margin-bottom: 50px;            
+            cursor: pointer;  
+            
+            label, input {
+                cursor: pointer;
+            }
+        }
+
+        .checkbox-agree label {
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: center;
+        }
+
+        input[type=checkbox] {
+            width: 24px;
+            height: 24px;
+            margin: 5px 16px 5px 0;
+            position: relative;
+        }
+
+        input[type=checkbox]:before {
+            content: "";
+            color: transparent;
+            display: inline-block;
+            border: 1px solid $color-white;
+            border-radius: 2px;
+            font-size: 20px;
+            font-weight: 900;
+            line-height: 22px;
+            margin: -5px 5px 0 0;
+            height: 24px;
+            width: 24px;
+            text-align: center;
+            vertical-align: middle;
+            transition: color ease .3s;
+            background-color: $color-black;
+        }
+
+        input[type=checkbox]:checked:after {
+            content: '';
+            display: block;
+            height: 10px;
+            width: 6px;
+            border-bottom: 2px solid $color-white;
+            border-right: 2px solid $color-white;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: rotate(45deg) translate(calc(-50% - 4px), calc(-50% - -1px));
+
+        }
+    
     }
 }

@@ -7,7 +7,7 @@
 @endphp
 
 <section class="earn">
-    <div class="earn__wrapp main-widht">
+    <div class="earn__wrapp main-width">
         <div class="earn__content">
             <h2 class="title">{{ $title }}</h2>
             <p>{{ $description }}</p>        

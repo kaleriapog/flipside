@@ -3,6 +3,7 @@ $main-color-bg: #0A0722;
 $second-color-bg: #0B0622;
 $color-footer-bg: #00030C;
 $color-white: #ffffff;
+$color-black: #000000;
 $colot-mark: #0A0722;
 $color-hover: #B370FF;
 
@@ -13,6 +14,7 @@ $mediaWidthTablet: 991px;
 $mediaWidthLaptop: 1060px;
 $width1300: 1300px;
 $width1200: 1200px;
+$mediaWidthMobileSmall: 500px;
 
 @mixin media-tablet {
     @media (max-width: $mediaWidthTablet) {
@@ -40,6 +42,12 @@ $width1200: 1200px;
 
 @mixin media-1200 {
     @media (max-width: $width1200) {
+        @content;
+    }
+}
+
+@mixin mediaWidthMobileSmall {
+    @media (max-width: $mediaWidthMobileSmall) {
         @content;
     }
 }

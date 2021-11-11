@@ -3,10 +3,12 @@
 $title = get_field('title_contact', $post->ID); 
 $subtitle = get_field('subtitle_contact', $post->ID); 
 $form_contact = get_field('form_contact', $post->ID);
+$image_bg = get_field('image_bg-form', $post->ID);
+
 
 @endphp
 
-<section class="contact-form">
+<section class="contact-form" style="background-image: url('{{ $image_bg['url'] }}');">
     <div class="contact-form__wrapp main-width">
         <div class="contact-form__description">
             <h2 class="title">{{ $title }}</h2>
