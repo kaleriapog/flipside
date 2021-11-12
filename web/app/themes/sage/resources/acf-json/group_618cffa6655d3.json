@@ -3,25 +3,6 @@
     "title": "Blog",
     "fields": [
         {
-            "key": "field_618cffb8f773d",
-            "label": "Title Blog",
-            "name": "title_blog",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
             "key": "field_618d032742c4a",
             "label": "Subblock Blog",
             "name": "subblock_blog",
@@ -125,5 +106,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1636641623
+    "modified": 1636709114
 }

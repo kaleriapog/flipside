@@ -1,8 +1,11 @@
 // header style
 .header {
     padding: 30px 0;
-    position: sticky;
+    position: fixed;
     top: 0;
+    left: 0;
+    right: 0;
+    z-index: 11;
 
     @include media-mobile {
         padding: 15px 0;
@@ -24,15 +27,30 @@
             margin-left: 60px;
             font-weight: 500;
 
+            .sub-menu {
+                position: absolute;
+                z-index: -10;
+                opacity: 0;
+                height: 0;
+                transition: all 0.3s;
+
+                li {
+                    margin-left: 0;
+                    line-height: 200%;
+                }
+            }
+
             @include media-laptop {
                 margin-bottom: 25px;
                 margin-left: 0;
                 transition: all 0.3s;
-            }
-
-            &:hover {
-                color: $colot-mark;
-            }
+            }  
+        }
+        
+        .menu-item:hover .sub-menu {
+            z-index: 10;
+            opacity: 1;
+            height: auto;
         }
     }
 

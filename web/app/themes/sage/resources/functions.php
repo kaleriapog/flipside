@@ -152,14 +152,6 @@ if( function_exists('acf_add_options_page') ) {
 
 add_theme_support( 'post-thumbnails' );
 
-add_filter( 'excerpt_more', 'new_excerpt_more' );
-
-function new_excerpt_more( $more ){
-    global $post;
-    return '<a class="read-more" href="'. get_permalink($post) . '">Читать дальше...</a>';
-}
-
-
 function wpschool_load_fontawesome() {
     wp_enqueue_style( 'font-awesome', get_stylesheet_directory_uri() . '/themes/sage/resources/assets/fonts/css/fontawesome.min.css' );
 }

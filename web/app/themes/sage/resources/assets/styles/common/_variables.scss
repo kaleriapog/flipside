@@ -6,6 +6,8 @@ $color-white: #ffffff;
 $color-black: #000000;
 $colot-mark: #0A0722;
 $color-hover: #B370FF;
+$color-link-post: #B370FF;
+$color-link-post-hover: #EC4D78;
 
 
 // For device
@@ -14,6 +16,7 @@ $mediaWidthTablet: 991px;
 $mediaWidthLaptop: 1060px;
 $width1300: 1300px;
 $width1200: 1200px;
+$width1000: 1000px;
 $mediaWidthMobileSmall: 500px;
 
 @mixin media-tablet {
@@ -42,6 +45,12 @@ $mediaWidthMobileSmall: 500px;
 
 @mixin media-1200 {
     @media (max-width: $width1200) {
+        @content;
+    }
+}
+
+@mixin media-1000 {
+    @media (max-width: $width1000) {
         @content;
     }
 }

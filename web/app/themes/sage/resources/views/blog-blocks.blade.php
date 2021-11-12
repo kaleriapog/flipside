@@ -8,5 +8,6 @@
 @section('content')
 
   @include('blocks.blog-preview')
+  @include('blocks.all-post')
 
 @endsection
