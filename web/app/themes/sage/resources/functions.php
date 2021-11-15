@@ -157,8 +157,61 @@ function wpschool_load_fontawesome() {
 }
 add_action( 'wp_enqueue_scripts', 'wpschool_load_fontawesome' );
 
-// add_action( 'wp_enqueue_scripts', 'enqueue_load_fa' );
+/* For Loading posts */
 
-// function enqueue_load_fa() {
-//     wp_enqueue_style( 'load-fa', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' );
-// }
+add_action( 'wp_enqueue_scripts', 'true_loadmore_scripts' );
+ 
+function true_loadmore_scripts() { 
+    wp_enqueue_script( 'jquery' );
+    
+ 	wp_register_script( 
+		'true_loadmore', 
+		get_stylesheet_directory_uri() . './loadmore.js', 
+		array( 'jquery' ),
+		time() 
+	);
+ 
+	wp_localize_script( 
+		'true_loadmore', 
+		'flipside', 
+		array( 'ajaxurl' => admin_url( 'admin-ajax.php' ) )
+	);
+ 
+	wp_enqueue_script( 'true_loadmore' );
+}
+
+add_action( 'wp_ajax_loadmore', 'true_loadmore' );
+add_action( 'wp_ajax_nopriv_loadmore', 'true_loadmore' );
+ 
+function true_loadmore() {
+ 
+	
+    $paged = 1;
+    $offset = 0;
+    
+    if(!empty($_GET['offset'])){
+    $offset = $_GET['offset'];   
+    }
+    if(!empty($_GET['paged'])){
+        $paged = $_GET['paged'];
+    }
+
+ 
+	$args = array(
+		'paged' => $paged,
+        'offset' => $offset,
+        'posts_per_page' => 3,
+		'post_status' => 'publish',
+        'post_type'=> 'post'
+	);
+
+    echo \App\template(
+        'blocks.all-post',
+    [
+        'query_args'  => $args,
+    ]
+);
+ 
+	die;
+ 
+}

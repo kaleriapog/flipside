@@ -16,7 +16,7 @@ export default {
     $('.accordion__content-item .accordion__content').slideDown();   
     $('.icon-menu-mob-wrapp').on('click', function (){
       $('.header__navigation').toggleClass('open-menu');
-      $('.main').toggleClass('hide');
+      $('body').toggleClass('hide');
     });
       
     // JavaScript for accordion

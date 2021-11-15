@@ -5,9 +5,10 @@
     }
     $title_welcome = get_field('title_welcome', "$post->ID");
     $subtitle_welcome = get_field('subtitle_welcome', "$post->ID");
+    $colored_spots = get_field('colored_spots', "$post->ID");
 @endphp
 
-<section class="welcome">
+<section class="welcome" style="background-image: url('{{ $colored_spots['url'] }}');">
     <div class="main-widht welcome__wrapp">
         <h2 class="title">{{ $title_welcome }}</h2>
         <p class="welcome__subtitle">{{ $subtitle_welcome }}</p>

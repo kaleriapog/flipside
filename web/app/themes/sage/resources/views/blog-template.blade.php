@@ -8,7 +8,13 @@
 @section('content')
 
   @include('blocks.post')
-  @include('blocks.all-post')
-
+  <section class="post-list">    
+    <div class="post-list__wrapp main-width">
+      <div class="post-list__items">
+        @include('blocks.all-post')       
+      </div>
+      @include('blocks.view-more')  
+    </div>
+  </section>
 @endsection
 
